@@ -2,8 +2,13 @@
   "name": "origin-react",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "bun run --hot server.ts",
+    "react-watch": "tsc src/script.ts --module ESNext --target ESNext --moduleResolution node --watch --skipLibCheck --outDir dist",
+    "react": "tsc src/script.ts --module ESNext --target ESNext --moduleResolution node --watch --skipLibCheck --outDir dist"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "^1.1.13"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
